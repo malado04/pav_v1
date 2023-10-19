@@ -1,0 +1,1 @@
+<h1>Template du site</h1>
