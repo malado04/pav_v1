@@ -359,50 +359,50 @@ return [
             ],
         ],
       
-        [
-            'text'    => 'Service douanier',
-            'icon'    => 'fas fa-fw fa-user-ninja',
-            'can' => 'admin-access',
-            'icon_color' => 'success',
-            'submenu' => [
-                [
-                    'text' => 'Douanier',
-                    'icon'    => 'fas fa-fw fa-users',
-                    'icon_color' => 'success',
-                    'url' => '/douniers',
-                ] , 
-            ],
-        ],
+        // [
+        //     'text'    => 'Service douanier',
+        //     'icon'    => 'fas fa-fw fa-user-ninja',
+        //     'can' => 'admin-access',
+        //     'icon_color' => 'success',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Douanier',
+        //             'icon'    => 'fas fa-fw fa-users',
+        //             'icon_color' => 'success',
+        //             'url' => '/douniers',
+        //         ] , 
+        //     ],
+        // ],
 
-        [
-            'text'    => 'Impot et domaine',
-            'icon'    => 'fas fa-fw fa-user-ninja',
-            'can' => 'admin-access',
-            'icon_color' => 'success',
-            'submenu' => [
-                [
-                    'text' => 'Impot et domaine',
-                    'icon'    => 'fas fa-fw fa-users',
-                    'icon_color' => 'success',
-                    'url' => '/impots',
-                ] , 
-            ],
-        ],
+        // [
+        //     'text'    => 'Impot et domaine',
+        //     'icon'    => 'fas fa-fw fa-user-ninja',
+        //     'can' => 'admin-access',
+        //     'icon_color' => 'success',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Impot et domaine',
+        //             'icon'    => 'fas fa-fw fa-users',
+        //             'icon_color' => 'success',
+        //             'url' => '/impots',
+        //         ] , 
+        //     ],
+        // ],
 
-        [
-            'text'    => 'Services des mines',
-            'icon'    => 'fas fa-fw fa-user-ninja',
-            'can' => 'admin-access',
-            'icon_color' => 'success',
-            'submenu' => [
-                [
-                    'text' => 'Services des mines',
-                    'icon'    => 'fas fa-fw fa-users',
-                    'icon_color' => 'success',
-                    'url' => '/mines',
-                ] , 
-            ],
-        ],     //***********************************************
+        // [
+        //     'text'    => 'Services des mines',
+        //     'icon'    => 'fas fa-fw fa-user-ninja',
+        //     'can' => 'admin-access',
+        //     'icon_color' => 'success',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Services des mines',
+        //             'icon'    => 'fas fa-fw fa-users',
+        //             'icon_color' => 'success',
+        //             'url' => '/mines',
+        //         ] , 
+        //     ],
+        // ],     //***********************************************
 
         ['header' => "Parametres d'accés",
             'can' => 'admin-access',
@@ -545,20 +545,20 @@ return [
                 ] , 
             ],
         ],    
-        [
-            'text'    => 'Déclaration véhicule',
-            'icon'    => 'fas fa-fw fa-user-ninja',
-            'can' => 'douanier-access',
-            'icon_color' => 'success',
-            'submenu' => [
-                [
-                    'text' => 'List',
-                    'icon'    => 'fas fa-fw fa-users',
-                    'icon_color' => 'success',
-                    'url' => '/declarations',
-                ] , 
-            ],
-        ],     //***********************************************
+        // [
+        //     'text'    => 'Déclaration véhicule',
+        //     'icon'    => 'fas fa-fw fa-user-ninja',
+        //     'can' => 'douanier-access',
+        //     'icon_color' => 'success',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'List',
+        //             'icon'    => 'fas fa-fw fa-users',
+        //             'icon_color' => 'success',
+        //             'url' => '/declarations',
+        //         ] , 
+        //     ],
+        // ],     //***********************************************
 
 //***********************************************    impot-access      //***********************************************
 
@@ -595,21 +595,20 @@ return [
             'icon_color' => 'success',
             'route' => 'home_mine',
         ],
-        [
-            'text'    => 'Services des mines',
-            'icon'    => 'fas fa-fw fa-user-ninja',
-            'can' => 'servicemine-access',
-            'icon_color' => 'success',
-            'submenu' => [
-                [
-                    'text' => 'Services des mines',
-                    'icon'    => 'fas fa-fw fa-users',
-                    'icon_color' => 'success',
-                    'url' => '/mines',
-                ] , 
-            ],
-        ], 
-
+        // [
+        //     'text'    => 'Services des mines',
+        //     'icon'    => 'fas fa-fw fa-user-ninja',
+        //     'can' => 'servicemine-access',
+        //     'icon_color' => 'success',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Services des mines',
+        //             'icon'    => 'fas fa-fw fa-users',
+        //             'icon_color' => 'success',
+        //             'url' => '/mines',
+        //         ] , 
+        //     ],
+        // ],
         [
             'text'    => 'Clients',
             'icon'    => 'fas fa-fw fa-user-ninja',

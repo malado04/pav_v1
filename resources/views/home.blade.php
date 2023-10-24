@@ -119,49 +119,15 @@
                             </div>
                         </div>
                     </div>
-                   </fieldset><br>
-                   <fieldset>
-                       <legend class="card-header bg-dark text-white">Informations sur la personne à contacter</legend>
+                    </fieldset>
+                    </div>
+                    <div class="card-footer ">
                         <div class="row">
-                        <div class="col-md-4"><br> 
-                            <div class="form-group">
-                                <label for="">Nom  </label>
-                                <input type="text" class="form-control @error('nmbr_enfant') is-invalid @enderror" id="" placeholder="Nom" name="nom_cntct" value="{{$user->nom_cntct}}" required>
-                                @error('nom_cntct') <span class="text-danger">{{$message}}</span> @enderror
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-info form-control">Modifier mes informations</button>
                             </div>
-                            <div class="form-group">
-                                <label for="">Prénom  </label>
-                                <input type="text" class="form-control @error('prenom_cntct') is-invalid @enderror" id="" placeholder="Prénom contact" name="prenom_cntct" value="{{$user->prenom_cntct}}" required>
-                                @error('prenom_cntct') <span class="text-danger">{{$message}}</span> @enderror
-                            </div>
-                            </div>
-                        <div class="col-md-4"><br>
-                            <div class="form-group">
-                                <label for="">Téléphone  </label>
-                                <input type="number" class="form-control @error('tel_cntct') is-invalid @enderror" id="" placeholder="Téléphone contact" name="tel_cntct" value="{{$user->tel_cntct}}" required>
-                                @error('tel_cntct') <span class="text-danger">{{$message}}</span> @enderror
-                            </div>                        
-                            </div>                        
-                        <div class="col-md-4"><br>
-                            <div class="form-group">
-                                <label for="">Adresse  </label>
-                                <input type="text" class="form-control @error('adresse_cntct') is-invalid @enderror" id="" placeholder="Adresse contact" name="adresse_cntct" value="{{$user->adresse_cntct}}" required>
-                                @error('adresse_cntct') <span class="text-danger">{{$message}}</span> @enderror
-                            </div> 
                         </div>
                     </div>
-                   </fieldset>
-                    </div>
-
-
-
-                <div class="card-footer ">
-                    <div class="row">
-                        <div class="col-md-3">
-                    <button type="submit" class="btn btn-info form-control">Modifier l'agent</button></div>
-                        <div class="col-md-3">
-                    </div>
-                </div>
                 </div>
             </div>
         </div>

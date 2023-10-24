@@ -15,9 +15,12 @@
             <div class="card">
                 <div class="card-header bg-info">
                     <h1 class="m-0 text-black text-white"><i class="fa fa-list"> </i> Liste des clients
+                        <?php if (Auth::user()->admin != 4): ?>
+                            
                         <a href="{{route('clients.create')}}" class="btn btn-info mb-2 border border-radius border-2 border-white" style="float:right;"> <i class="fa fa-plus"></i>
                              Ajouter un client
                         </a>
+                        <?php endif ?>
     
 <!--                     <a href="#" class="btn btn-info mb-2 border border-radius border-2 border-white" style="float:right;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"> Ajouter un client ! </a>
  --><!--                     <button type="button" class="btn btn-primary"  class="btn btn-info mb-2 border border-radius border-2 border-white" style="float:right;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Ajouter un client !</button>

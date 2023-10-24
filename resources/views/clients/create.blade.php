@@ -81,49 +81,40 @@
                                 @error('situa_matrim') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                         </div>
+                       <!--  <div class="col-md-4"><br> 
+                            <div class="form-group">
+                                <label for="">Profil de l'utilisateur </label>
+                                <select class="form-control @error('admin') is-invalid @enderror" id="" placeholder="admin" name="admin" >
+                                    <optgroup label="Douanier (e)">
+                                        <option value="1">Douanier (e)</option>
+                                    </optgroup>
+                                    <optgroup label="DUC">
+                                        <option value="5">DUC</option>
+                                    </optgroup>
+                                    <optgroup label="Service des mines">
+                                        <option value="2">Agent Service des mines</option>
+                                    </optgroup>
+                                    <optgroup label="Impots et domaines">
+                                        <option value="3">Agent Impots et domaines</option>
+                                    </optgroup>
+                                    <optgroup label="Client">
+                                        <option value="4">Client</option>
+                                    </optgroup>
+                                </select>
+                                @error('admin') <span class="text-danger">{{$message}}</span> @enderror
+                            </div>
+                        </div> -->
                     </div>
                    </fieldset><br>
-                   <fieldset>
-                       <legend class="card-header bg-dark text-white">Informations sur la personne à contacter</legend>
-                        <div class="row">
-                        <div class="col-md-4"><br> 
-                            <div class="form-group">
-                                <label for="">Nom  </label>
-                                <input type="text" class="form-control @error('nmbr_enfant') is-invalid @enderror" id="" placeholder="Nom" name="nom_cntct"  required>
-                                @error('nom_cntct') <span class="text-danger">{{$message}}</span> @enderror
-                            </div>
-                            <div class="form-group">
-                                <label for="">Prénom  </label>
-                                <input type="text" class="form-control @error('prenom_cntct') is-invalid @enderror" id="" placeholder="Prénom contact" name="prenom_cntct"  required>
-                                @error('prenom_cntct') <span class="text-danger">{{$message}}</span> @enderror
-                            </div>
-                            </div>
-                        <div class="col-md-4"><br>
-                            <div class="form-group">
-                                <label for="">Téléphone  </label>
-                                <input type="number" class="form-control @error('tel_cntct') is-invalid @enderror" id="" placeholder="Téléphone contact" name="tel_cntct"  required>
-                                @error('tel_cntct') <span class="text-danger">{{$message}}</span> @enderror
-                            </div>                        
-                            </div>                        
-                        <div class="col-md-4"><br>
-                            <div class="form-group">
-                                <label for="">Adresse  </label>
-                                <input type="text" class="form-control @error('adresse_cntct') is-invalid @enderror" id="" placeholder="Adresse contact" name="adresse_cntct"  required>
-                                @error('adresse_cntct') <span class="text-danger">{{$message}}</span> @enderror
-                            </div> 
-                        </div>
-                    </div>
-                   </fieldset>
                     </div>
 
-                    </div>
 
 
 
                     <div class="card-footer ">
                         <div class="row">
                             <div class="col-md-5">
-                        <button type="submit" class="btn btn-info form-control">Enregistrer l'agent</button></div>
+                        <button type="submit" class="btn btn-info form-control">Enregistrer client</button></div>
                             <div class="col-md-5">
                         <a href="{{route('users.index')}}" class="btn btn-danger form-control">
                             Annuler l'enregistrement

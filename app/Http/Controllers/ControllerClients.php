@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
 class ControllerClients extends Controller
@@ -50,7 +52,6 @@ class ControllerClients extends Controller
         $datet=date('Y');
         $dat = $request->date_naissance;
         $datY= explode("-", $dat); 
-        $admin = 4;
         
         $user = User::create([
             'name' => $request->name,
@@ -66,19 +67,16 @@ class ControllerClients extends Controller
             'situa_matrim' => $request->situa_matrim,
             'nmbr_epouse' => $request->nmbr_epouse,
             'nmbr_enfant' => $request->nmbr_enfant,
-            'nom_cntct' => $request->nom_cntct,
-            'prenom_cntct' => $request->prenom_cntct,
-            'tel_cntct' => $request->tel_cntct,
-            'adresse_cntct' => $request->adresse_cntct,
-            'admin' => $request->admin,
+            'admin' => 4,
             'email' => $email, 
             'fk_user_id' => Auth::user()->id,
             'password' => Hash::make($mdp),
         ]);
         // var_dump($request->service_affect);
-        if (!$user) return redirect()->route('users.create')
+
+        if (!$user) return redirect()->route('clients.create')
                 ->with('error_message', 'Utilisateur non créer');
-        return redirect()->route('users.index')
+        return redirect()->route('clients.index')
             ->with('success_message', 'Utilisateur créer avec success');
     }
 
@@ -92,10 +90,10 @@ class ControllerClients extends Controller
     public function show($id)
     {
        
-        $id= Entreprise::where("id", $id)->get();
+        $client= User::where("id", $id)->get();
 
-        return view('clients.create', [
-            'ent' => $id[0]->id,
+        return view('clients.show', [
+            'client' => $client[0],
         ]);
     }
 
@@ -109,9 +107,9 @@ class ControllerClients extends Controller
     {
         $client = User::find($id);
 
-        if (!$client) return redirect()->route('clients.index')
-            ->with('error_message', 'User dengan id'.$id.' tidak ditemukan');
-        return view('clients.edit', ['user' => $client ]);
+        return view('clients.edit', [
+            'client' => $client,
+        ]);
     }
 
     /**
@@ -125,29 +123,15 @@ class ControllerClients extends Controller
     {
         $client = User::find($id);
              
-        $client->code = $request->code;
         $client->cni = $request->cni;
-        $client->nom = $request->nom;
+        $client->name = $request->name;
         $client->prenom = $request->prenom;
-        $client->tel = $request->tel;
+        $client->telpor = $request->tel;
         $client->adresse = $request->adresse;
-        $client->statutmat = $request->statutmat;
-        $client->datenais = $request->datenais;
-        $client->lieuxnais = $request->lieuxnais;
-        $client->nbrdayantdroit = $request->nbrdayantdroit;
-        $client->sex = $request->sex;
+        $client->genre = $request->genre;
+        $client->date_naissance = $request->date_naissance;
+        $client->lieu_naissance = $request->lieu_naissance;
         $client->email = $request->email;
-        $client->nbrenf = $request->nbrenf;
-        $client->type_contrat = $request->type_contrat;
-        $client->datedebut = $request->datedebut;
-        $client->datefin = $request->datefin;
-        $client->salaire = $request->salaire;
-        if (isset($request->code)) {
-            $client->act = 1;
-        } else {
-            $client->act = 0;
-        }
-        $client->fk_ent_id = $request->fk_ent_id;
         $client->fk_up_id = Auth::user()->id;
         $client->save();
         return redirect()->route('clients.index')
