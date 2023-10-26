@@ -64,13 +64,13 @@ class ControllerVehicule extends Controller
                 $veh->fileduc=$path ?? "Aucune";
             } 
 
-            if (Auth::user()->admin == 2) {
+            if (Auth::user()->admin == 3) {
                 $veh->mine = 1;
                 $path = $request->file('file')->store('uploads');
                 $veh->filemine=$path ?? "Aucune";
             } 
 
-            if (Auth::user()->admin == 3) {
+            if (Auth::user()->admin == 2) {
                 $veh->impot = 1;
                 $path = $request->file('file')->store('uploads');
                 $veh->fileimpot=$path ?? "Aucune";

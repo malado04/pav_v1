@@ -36,7 +36,7 @@
                                 <th>prenom </th>
                                 <th>cni </th>
                                 <th>Date et lieux de naissance </th>
-                                <th>age </th>
+                                <!-- <th>age </th> -->
                                 <th>telpor </th>
                                 <th>adresse </th>
                                 <th class="btn-outline-success"><i class="fa fa-eye"> </i></th>
@@ -52,7 +52,7 @@
                                 <td>{{$client->prenom}}</td>
                                 <td>{{$client->cni}}</td>
                                 <td>{{$client->date_naissance}} {{$client->lieu_naissance}}</td>
-                                <td>{{$client->age}}</td>
+                                <!-- <td>{{$client->age}}</td> -->
                                 <td>{{$client->telpor}}</td>
                                 <td>{{$client->adresse}}</td>
                                 <td style="width: 5%;">

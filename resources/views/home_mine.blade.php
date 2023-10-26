@@ -119,7 +119,7 @@
                             </div>
                         </div>
                     </div>
-                   </fieldset><br>
+                   </fieldset><br><!-- 
                    <fieldset>
                        <legend class="card-header bg-dark text-white">Informations sur la personne à contacter</legend>
                         <div class="row">
@@ -150,7 +150,7 @@
                             </div> 
                         </div>
                     </div>
-                   </fieldset>
+                   </fieldset> -->
                     </div>
 
 
@@ -183,6 +183,7 @@
                                 <th>Essence </th>
                                 <th>Numero carte grise </th>
                                 <th>Douane </th>
+                                <th>DUC </th>
                                 <th>Service des mines </th>
                                 <th>Impots et Domaines </th>
                               </tr>
@@ -197,9 +198,70 @@
                                 <td>{{$vehicule->puissances}}</td>
                                 <td>{{$vehicule->essence}}</td>
                                 <td>{{$vehicule->numerocartegrise}}</td>
-                                <td class="btn-danger"></td>
-                                <td class="btn-danger"></td>
-                                <td class="btn-danger"></td>
+                                <!-- douane -->
+                                    <?php if ($vehicule->file): ?>
+                                        <td style="width: 5%;" class="bg-success">
+                                            <!-- <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
+                                                <i class="fa fa-eye"> </i>
+                                            </a> -->
+                                        </td>
+                                    <?php else: ?>
+                                        <td style="width: 5%;" class="bg-danger">
+                                            <!-- <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
+                                                <i class="fa fa-eye"> </i>
+                                            </a> -->
+                                        </td>
+                                        
+                                    <?php endif ?>
+                               <!-- DUC -->
+
+                                    <?php if ($vehicule->duc == 1): ?>
+                                        <td style="width: 5%;" class="bg-success">
+                                        <!--     <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
+                                                <i class="fa fa-eye"> </i>
+                                            </a> -->
+                                        </td>
+                                    <?php else: ?>
+                                        <td style="width: 5%;" class="bg-danger">
+                                        <!--     <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
+                                                <i class="fa fa-eye"> </i>
+                                            </a> -->
+                                        </td>
+                                        
+                                    <?php endif ?>
+                               <!-- service des mines -->
+                          
+                                    <?php if ($vehicule->mine == 1): ?>
+                                        <td style="width: 5%;" class="bg-success">
+                                             <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
+                                                <i class="fa fa-eye"> </i>
+                                            </a> 
+                                        </td>
+                                    <?php else: ?>
+                                        <td style="width: 5%;" class="bg-danger">
+                                            <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
+                                                <i class="fa fa-eye"> </i>
+                                            </a> 
+                                        </td>
+                                        
+                                    <?php endif ?>
+                               <!-- impot -->
+
+                                    <?php if ($vehicule->impot == 1): ?>
+                                        <td style="width: 5%;" class="bg-success">
+                                          <!--   <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
+                                                <i class="fa fa-eye"> </i>
+                                            </a> -->
+                                        </td>
+                                    <?php else: ?>
+                                        <td style="width: 5%;" class="bg-danger">
+                                           <!--  <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
+                                                <i class="fa fa-eye"> </i>
+                                            </a> -->
+                                        </td>
+                                        
+                                    <?php endif ?>
+                             
                               </tr>
                           @endforeach
                           </tbody>

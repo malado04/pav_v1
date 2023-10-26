@@ -29,11 +29,12 @@ input[type=file]::file-selector-button:hover {
     <div class="row">
         <div class="col-12">
             <div class="card">
+               <?php if (Auth::user()->admin != 4): ?>
                 <div class="card-header bg-info">
                     <h3 class="m-0 text-black"><i class="fas fa-fw fa-file"></i><i> Joindre la déclaration</i>
                      </h3>
-                </div>
-                <form action="{{route('vehicules.store')}}" method="post" enctype="multipart/form-data">
+                </div><br><br>
+                    <form action="{{route('vehicules.store')}}" method="post" enctype="multipart/form-data">
         @csrf
 
                    <div class="card-body">
@@ -60,6 +61,13 @@ input[type=file]::file-selector-button:hover {
                     </div>
 
                 </form>
+                <?php else: ?>
+                <div class="card-header bg-info">
+                    <h3 class="m-0 text-black"><i class="fas fa-fw fa-file"></i><i> Déclaration</i>
+                     </h3>
+                </div><br><br>
+
+               <?php endif ?>
                                         <div class="form-group"> 
                     <style>
                     .zoom{
@@ -79,6 +87,7 @@ input[type=file]::file-selector-button:hover {
 
                     <div class="row">
                         <div class="col-md-3">
+                            <h2 class="text-center bg-info">Douanier</h2>
                         @if ($vehicule->file)
                             <img src="../storage/{{ $vehicule->file}}" alt="Un fichier joint" class="zoom"><br><br><br><br>
                             <a href="../storage/{{$vehicule->file}}" class=""> Afficher la piece jointe</a>
@@ -86,6 +95,7 @@ input[type=file]::file-selector-button:hover {
                         @endif
                         </div>
                         <div class="col-md-3">
+                            <h2 class="text-center bg-info">DUC</h2>
                         @if ($vehicule->fileduc)
                             <img src="../storage/{{ $vehicule->fileduc}}" alt="Un fichier joint" class="zoom"><br><br><br><br>
                             <a href="../storage/{{$vehicule->fileduc}}" class=""> Afficher la piece jointe</a>
@@ -94,6 +104,7 @@ input[type=file]::file-selector-button:hover {
                         @endif               
                         </div>
                         <div class="col-md-3">
+                            <h2 class="text-center bg-info">Service des mines</h2>
                         @if ($vehicule->filemine)
                             <img src="../storage/{{ $vehicule->filemine}}" alt="Un fichier joint" class="zoom"><br><br><br><br>
                             <a href="../storage/{{$vehicule->filemine}}" class=""> Afficher la piece jointe</a>
@@ -102,6 +113,7 @@ input[type=file]::file-selector-button:hover {
                         @endif                
                         </div>
                         <div class="col-md-3">
+                            <h2 class="text-center bg-info">Impots et domaines</h2>
                         @if ($vehicule->fileimpot)
                             <img src="../storage/{{ $vehicule->fileimpot}}" alt="Un fichier joint" class="zoom"><br><br><br><br>
                             <a href="../storage/{{$vehicule->fileimpot}}" class=""> Afficher la piece jointe</a>

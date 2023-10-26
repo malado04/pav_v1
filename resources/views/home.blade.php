@@ -148,10 +148,9 @@
                                 <th>Puissances </th>
                                 <th>Essence </th>
                                 <th>Numero carte grise </th>
-                                <th>Douane </th>
-                                <th>DUC </th>
-                                <th>Service des mines </th>
-                                <th>Impots et Domaines </th>
+                                <th>
+                                            <i class="fa fa-eye"> </i>
+                                 </th>
                               </tr>
                           </thead>
                           <tbody>

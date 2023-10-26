@@ -201,7 +201,7 @@ Route::get('home_impot', function() {
         $admin = User::where("admin", 0)->count();
         $chef = User::where("admin", 1)->count();
         $user = Auth::user()->cni;
-        $veh = Vehicule::where("fk_client_id", Auth::user()->id)->get();
+        $veh = Vehicule::all();
 
         if ($user) {
         return view('home_impot', [

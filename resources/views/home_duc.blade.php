@@ -120,7 +120,7 @@
                         </div>
                     </div>
                    </fieldset><br>
-                   <fieldset>
+                 <!--   <fieldset>
                        <legend class="card-header bg-dark text-white">Informations sur la personne à contacter</legend>
                         <div class="row">
                         <div class="col-md-4"><br> 
@@ -150,7 +150,7 @@
                             </div> 
                         </div>
                     </div>
-                   </fieldset>
+                   </fieldset> -->
                     </div>
 
 

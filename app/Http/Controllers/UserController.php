@@ -49,34 +49,17 @@ class UserController extends Controller
     public function store(Request $request)
     {
        
-       if ($request->affect) {
-            $user = User::find($request->affect);
-            $svrc = Service::all();
-            // var_dump($user->id);
-
-            if (!$user) return redirect()->route('users.index')
-                ->with('error_message', 'User dengan id'.$request->id.' tidak ditemukan');
-            return view('users.edit', [
-                'svrcs' => $svrc,
-                'user' => $user
-            ]);
+        $mdp="passer123";
+        $prenom= explode(" ", $request->prenom); 
+        if (!isset($prenom[1])) {
+           
+            $pre = $prenom[0];
         } else {
             
-        // if (User::where('nmro_matric',  $request->nmro_matric)->exists()) {
-        //     return redirect()->route('users.create')
-        //     ->with('error_message', 'Ce matricule existe déja, veuillez utiliser une autre svp');
-        // } 
-        // if (User::where('telpor', '=', $request->tel)->exists()) {
-        //     return redirect()->route('users.create')
-        //     ->with('error_message', 'Ce tel existe déja, veuillez utiliser une autre svp');
-        // }     
-        // if (User::where('email', '=', $request->email)->exists()) {
-        //     return redirect()->route('users.create')
-        //     ->with('error_message', 'Ce email existe déja, veuillez utiliser une autre svp');
-        // } 
+            $pre = $prenom[0].$prenom[1] ?? $prenom[0];
+        }
         
-        $mdp="passer123";
-        $email = strtolower($request->prenom.$request->name.'@pav.com');
+        $email = strtolower($pre.$request->name.'@pav.com');
 
         $datet=date('Y');
         $dat = $request->date_naissance;
@@ -94,12 +77,12 @@ class UserController extends Controller
             'telpor' => $request->tel,
             'adresse' => $request->adresse,
             'situa_matrim' => $request->situa_matrim,
-            'nmbr_epouse' => $request->nmbr_epouse,
-            'nmbr_enfant' => $request->nmbr_enfant,
-            'nom_cntct' => $request->nom_cntct,
-            'prenom_cntct' => $request->prenom_cntct,
-            'tel_cntct' => $request->tel_cntct,
-            'adresse_cntct' => $request->adresse_cntct,
+            // 'nmbr_epouse' => $request->nmbr_epouse,
+            // 'nmbr_enfant' => $request->nmbr_enfant,
+            // 'nom_cntct' => $request->nom_cntct,
+            // 'prenom_cntct' => $request->prenom_cntct,
+            // 'tel_cntct' => $request->tel_cntct,
+            // 'adresse_cntct' => $request->adresse_cntct,
             'admin' => $request->admin,
             'email' => $email,
             'fk_service_id' => $request->service_affect,
@@ -112,7 +95,6 @@ class UserController extends Controller
                 ->with('error_message', 'Utilisateur non créer');
         return redirect()->route('users.index')
             ->with('success_message', 'Utilisateur créer avec success');
-         }
     }
 
     /**
@@ -194,12 +176,12 @@ class UserController extends Controller
              $user->telpor = $request->tel;
              $user->adresse = $request->adresse;
              $user->situa_matrim = $request->situa_matrim;
-             $user->nmbr_epouse = $request->nmbr_epouse;
-             $user->nmbr_enfant = $request->nmbr_enfant;
-             $user->nom_cntct = $request->nom_cntct;
-             $user->prenom_cntct = $request->prenom_cntct;
-             $user->tel_cntct = $request->tel_cntct;
-             $user->adresse_cntct = $request->adresse_cntct;
+             // $user->nmbr_epouse = $request->nmbr_epouse;
+             // $user->nmbr_enfant = $request->nmbr_enfant;
+             // $user->nom_cntct = $request->nom_cntct;
+             // $user->prenom_cntct = $request->prenom_cntct;
+             // $user->tel_cntct = $request->tel_cntct;
+             // $user->adresse_cntct = $request->adresse_cntct;
              $user->admin = $request->admin;
 
         $user->save();

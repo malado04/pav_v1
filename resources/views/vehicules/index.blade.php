@@ -38,7 +38,7 @@
                                 <th>Puissances </th>
                                 <th>Essence </th>
                                 <th>Numero carte grise </th>
-                                <th class="btn-success"><i class="fa fa-ninja"> </i></th>
+                                <th class="btn-success text-center"><i class="fa fa-taxi"> </i></th>
                                 <th class="btn-outline-primary"><i class="fa fa-edit"> </i></th>
                                 <th class="btn-outline-danger"><i class="fa fa-trash"> </i></th>
                             </tr>
@@ -56,15 +56,15 @@
                                 <!-- douane -->
                                <?php if (Auth::user()->admin == 1): ?>
                                     <?php if ($vehicule->file): ?>
-                                        <td style="width: 5%;" class="bg-success">
-                                            <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
-                                                <i class="fa fa-eye"> </i>
+                                        <td style="width: 7%;" class="bg-success text-center">
+                                            <a href="{{route('vehicules.show', $vehicule)}}" class="btn text-center btn-success btn-xs">
+                                                <i class="fa fa-eye"> A jour</i>
                                             </a>
                                         </td>
                                     <?php else: ?>
-                                        <td style="width: 5%;" class="bg-danger">
-                                            <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
-                                                <i class="fa fa-eye"> </i>
+                                        <td style="width: 7%;" class="bg-danger">
+                                            <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn- btn-xs">
+                                                <i class="fa fa-file">  </i> Déclarer
                                             </a>
                                         </td>
                                         
@@ -74,15 +74,15 @@
 
                                <?php if (Auth::user()->admin == 5): ?>
                                     <?php if ($vehicule->duc == 1): ?>
-                                        <td style="width: 5%;" class="bg-success">
-                                            <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
-                                                <i class="fa fa-eye"> </i>
+                                        <td style="width: 7%;" class="bg-success text-center">
+                                            <a href="{{route('vehicules.show', $vehicule)}}" class="btn text-center btn-success btn-xs">
+                                                <i class="fa fa-eye"> A jour </i>
                                             </a>
                                         </td>
                                     <?php else: ?>
-                                        <td style="width: 5%;" class="bg-danger">
+                                        <td style="width: 7%;" class="bg-danger">
                                             <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
-                                                <i class="fa fa-eye"> </i>
+                                                <i class="fa fa-file"> </i> Déclarer
                                             </a>
                                         </td>
                                         
@@ -92,15 +92,15 @@
                           
                                <?php if (Auth::user()->admin == 2): ?>
                                     <?php if ($vehicule->mine == 1): ?>
-                                        <td style="width: 5%;" class="bg-success">
+                                        <td style="width: 7%;" class="bg-success">
                                             <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
-                                                <i class="fa fa-eye"> </i>
+                                                <i class="fa fa-eye">  A jour</i>
                                             </a>
                                         </td>
                                     <?php else: ?>
-                                        <td style="width: 5%;" class="bg-danger">
+                                        <td style="width: 7%;" class="bg-danger">
                                             <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
-                                                <i class="fa fa-eye"> </i>
+                                                <i class="fa fa-taxi"> Déclarer</i>
                                             </a>
                                         </td>
                                         
@@ -110,15 +110,15 @@
 
                                <?php if (Auth::user()->admin == 3): ?>
                                     <?php if ($vehicule->impot == 1): ?>
-                                        <td style="width: 5%;" class="bg-success">
+                                        <td style="width: 7%;" class="bg-success">
                                             <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
-                                                <i class="fa fa-eye"> </i>
+                                                <i class="fa fa-eye">  A jour</i>
                                             </a>
                                         </td>
                                     <?php else: ?>
-                                        <td style="width: 5%;" class="bg-danger">
+                                        <td style="width: 7%;" class="bg-danger">
                                             <a href="{{route('vehicules.show', $vehicule)}}" class="btn btn-success btn-xs">
-                                                <i class="fa fa-eye"> </i>
+                                                <i class="fa fa-taxi"> Déclarer</i>
                                             </a>
                                         </td>
                                         

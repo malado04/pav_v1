@@ -359,51 +359,7 @@ return [
             ],
         ],
       
-        // [
-        //     'text'    => 'Service douanier',
-        //     'icon'    => 'fas fa-fw fa-user-ninja',
-        //     'can' => 'admin-access',
-        //     'icon_color' => 'success',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'Douanier',
-        //             'icon'    => 'fas fa-fw fa-users',
-        //             'icon_color' => 'success',
-        //             'url' => '/douniers',
-        //         ] , 
-        //     ],
-        // ],
-
-        // [
-        //     'text'    => 'Impot et domaine',
-        //     'icon'    => 'fas fa-fw fa-user-ninja',
-        //     'can' => 'admin-access',
-        //     'icon_color' => 'success',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'Impot et domaine',
-        //             'icon'    => 'fas fa-fw fa-users',
-        //             'icon_color' => 'success',
-        //             'url' => '/impots',
-        //         ] , 
-        //     ],
-        // ],
-
-        // [
-        //     'text'    => 'Services des mines',
-        //     'icon'    => 'fas fa-fw fa-user-ninja',
-        //     'can' => 'admin-access',
-        //     'icon_color' => 'success',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'Services des mines',
-        //             'icon'    => 'fas fa-fw fa-users',
-        //             'icon_color' => 'success',
-        //             'url' => '/mines',
-        //         ] , 
-        //     ],
-        // ],     //***********************************************
-
+     
         ['header' => "Parametres d'accés",
             'can' => 'admin-access',
         ],
@@ -625,7 +581,7 @@ return [
         ],     //***********************************************
 
 //***********************************************    client-access      //***********************************************
- 
+
         [
             'type'  => 'sidebar-menu-item',
             'icon'  => 'fas fa-tachometer-alt',
